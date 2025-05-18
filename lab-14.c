@@ -20,8 +20,7 @@ int count_substring_occurrences(const char *s1, const char *s2) {
         }
         if (match) {
             count++;
-            // Якщо підрядки не повинні перекриватися, додаємо:
-            // i += len2 - 1;
+
         }
     }
     
@@ -34,11 +33,11 @@ int main() {
     
     printf("Введіть рядок S1: ");
     fgets(s1, sizeof(s1), stdin);
-    s1[strcspn(s1, "\n")] = '\0'; // Видаляємо символ нового рядка
+    s1[strcspn(s1, "\n")] = '\0';
     
     printf("Введіть підрядок S2: ");
     fgets(s2, sizeof(s2), stdin);
-    s2[strcspn(s2, "\n")] = '\0'; // Видаляємо символ нового рядка
+    s2[strcspn(s2, "\n")] = '\0';
     
     int occurrences = count_substring_occurrences(s1, s2);
     printf("Кількість входжень підрядка S2 у рядок S1: %d\n", occurrences);
